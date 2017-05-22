@@ -1,0 +1,3 @@
+rootProject.name = 'ywam'
+
+include ':app'
