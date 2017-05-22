@@ -1,53 +1,30 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  StatusBar,
+  View,
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
+import Wrapper from './app/components/wrapper';
 
 export default class ywam extends Component {
+  static navigationOptions = {
+    title: 'Find My Mission',
+  };
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+      <View style={{flex: 1}}>
+        <StatusBar barStyle="dark-content" />
+        <Wrapper/>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+const app = StackNavigator({
+  Home: { screen: ywam },
 });
 
-AppRegistry.registerComponent('ywam', () => ywam);
+AppRegistry.registerComponent('ywam', () => app);
