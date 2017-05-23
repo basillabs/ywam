@@ -14,23 +14,36 @@ const defaultProps = {
   url: 'https://findmymission.com/',
 };
 
-const WEBVIEW_REF = 'webview';
-
 
 export default class Wrapper extends Component {
 
   constructor(props) {
-    super();
+    super(props);
+
+    this.state = {
+      canGoBack: false
+    };
+
     BackHandler.addEventListener('hardwareBackPress', () => {
-      this.refs[WEBVIEW_REF].goBack();
-      return true;
+      if (this.state.canGoBack) {
+        this.webView.goBack();
+        return true;
+      }
+      return false;
     });
   }
+
+  onNavigationStateChange = (navState) => {
+    this.setState({
+      canGoBack: navState.canGoBack
+    });
+  };
 
   render() {
     return (
       <WebView
-        ref={WEBVIEW_REF}
+        ref={(webview) => { this.webView = webview; }}
+        onNavigationStateChange={this.onNavigationStateChange}
         source={{uri: this.props.url}}
         startInLoadingState
       />
