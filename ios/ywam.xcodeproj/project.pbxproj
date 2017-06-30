@@ -573,7 +573,8 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = HJ84T7XL29;
+						DevelopmentTeam = RZ52V9C63J;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1002,9 +1003,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = HJ84T7XL29;
+				DEVELOPMENT_TEAM = RZ52V9C63J;
 				INFOPLIST_FILE = ywam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1014,6 +1016,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.findmymission.ywam;
 				PRODUCT_NAME = ywam;
+				PROVISIONING_PROFILE = "e2befce3-7a29-408b-965e-e3b32050a71e";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.findmymission.ywam";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1022,8 +1026,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HJ84T7XL29;
+				DEVELOPMENT_TEAM = RZ52V9C63J;
 				INFOPLIST_FILE = ywam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1033,6 +1038,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.findmymission.ywam;
 				PRODUCT_NAME = ywam;
+				PROVISIONING_PROFILE = "e2befce3-7a29-408b-965e-e3b32050a71e";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.findmymission.ywam";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
