@@ -1,4 +1,4 @@
-package com.ywam;
+package org.basiltech.findmymission;
 
 import android.app.Application;
 

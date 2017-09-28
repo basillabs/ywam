@@ -1,4 +1,4 @@
-package com.ywam;
+package org.basiltech.findmymission;
 
 import com.facebook.react.ReactActivity;
 
